@@ -16,18 +16,18 @@
   display: flex
   position: relative
   overflow: hidden
-  border: none
   height: 40px
   &__input
     width: 350px
     height: 100%
     padding-left: 23px
     padding-right: 75px
-    background-color: $text-color
-    bottom: none
     font-size: 14px
     line-height: 18px
-    color: #BDBDBD
+    border-radius: 6px
+    border: none
+    background: #F5FAFE
+    color: $text-color
   &__button
     cursor: pointer
     position: absolute
@@ -35,7 +35,8 @@
     right: 0
     width: 65px  
     height: 100%
-    bottom: none
+    border: none
+    border-radius: 0px 6px 6px 0px
     background-color: $primary-color
 .user
   display: flex

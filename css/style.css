@@ -351,7 +351,7 @@ template {
   color: #333333;
 }
 
-* body .container {
+* .container {
   max-width: 1110px;
   margin: auto;
 }
@@ -379,13 +379,16 @@ template {
   margin-left: 108px;
 }
 
+.header .placeholder {
+  color: #BDBDBD;
+}
+
 .search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
   overflow: hidden;
-  border-radius: 6px;
   height: 40px;
 }
 
@@ -394,20 +397,23 @@ template {
   height: 100%;
   padding-left: 23px;
   padding-right: 75px;
-  background-color: #F5FAFE;
-  bottom: none;
   font-size: 14px;
-  line-height: 18p;
-  color: #BDBDBD;
+  line-height: 18px;
+  border-radius: 6px;
+  border: none;
+  background: #F5FAFE;
+  color: #333333;
 }
 
 .search__button {
+  cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
   width: 65px;
   height: 100%;
-  bottom: none;
+  border: none;
+  border-radius: 0px 6px 6px 0px;
   background-color: #EC1F46;
 }
 
@@ -432,7 +438,7 @@ template {
 .user__name {
   margin-left: 18px;
   font-size: 14px;
-  line-height: 18;
+  line-height: 18px;
   color: #333333;
 }
 /*# sourceMappingURL=style.css.map */
