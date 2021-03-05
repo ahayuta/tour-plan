@@ -9,23 +9,27 @@
   &__search
     margin-right: auto
     margin-left: 108px
+  .placeholder 
+    color: $text-grey  
+  
 .search
   display: flex
   position: relative
   overflow: hidden
-  border-radius: 6px
+  border: none
   height: 40px
   &__input
     width: 350px
     height: 100%
     padding-left: 23px
     padding-right: 75px
-    background-color: #F5FAFE
+    background-color: $text-color
     bottom: none
     font-size: 14px
-    line-height: 18p
+    line-height: 18px
     color: #BDBDBD
   &__button
+    cursor: pointer
     position: absolute
     top: 0
     right: 0
@@ -45,5 +49,5 @@
   &__name
     margin-left: 18px
     font-size: 14px
-    line-height: 18
+    line-height: 18px
     color: $text-color
