@@ -356,11 +356,11 @@ template {
   margin: auto;
 }
 
-.header {
+.navbar {
   background-color: #fff;
 }
 
-.header-top {
+.navbar-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,12 +374,12 @@ template {
   padding-bottom: 40px;
 }
 
-.header__search {
+.navbar__search {
   margin-right: auto;
   margin-left: 108px;
 }
 
-.header .placeholder {
+.navbar .placeholder {
   color: #BDBDBD;
 }
 
