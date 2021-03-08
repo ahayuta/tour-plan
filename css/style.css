@@ -648,7 +648,7 @@ img {
 
 @media (max-width: 768px) {
   .container {
-    max-width: 576px;
+    max-width: 700px;
     width: 92%;
   }
   .navbar__user {
