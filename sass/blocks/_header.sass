@@ -11,8 +11,6 @@
   &__search
     margin-right: auto
     margin-left: 108px
-  .placeholder 
-    color: $text-grey
   &-bottom
     background-color: $dark
   &-container
@@ -31,7 +29,8 @@
       text-decoration: none
       text-transform: uppercase
       font-size: 14px
-      line-height: 18px   
+      line-height: 18px
+      font-weight: bold
 .logo
   width: 177px 
 .search
@@ -50,6 +49,8 @@
     border: none
     background: #F5FAFE
     color: $text-color
+    &::placeholder
+      color: $text-grey
   &__button
     cursor: pointer
     position: absolute

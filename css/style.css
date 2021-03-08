@@ -388,10 +388,6 @@ img {
   margin-left: 108px;
 }
 
-.navbar .placeholder {
-  color: #BDBDBD;
-}
-
 .navbar-bottom {
   background-color: #0A223D;
 }
@@ -423,6 +419,7 @@ img {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
+  font-weight: bold;
 }
 
 .logo {
@@ -449,6 +446,22 @@ img {
   border: none;
   background: #F5FAFE;
   color: #333333;
+}
+
+.search__input::-webkit-input-placeholder {
+  color: #BDBDBD;
+}
+
+.search__input:-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.search__input::-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.search__input::placeholder {
+  color: #BDBDBD;
 }
 
 .search__button {
@@ -638,7 +651,7 @@ img {
     max-width: 576px;
     width: 92%;
   }
-  .navbar__search, .navbar-menu, .navbar__user {
+  .navbar__user {
     display: none;
   }
   .menu-button {
@@ -660,6 +673,7 @@ img {
             flex-direction: column;
     border: none;
     cursor: pointer;
+    background-color: #fff;
   }
   .menu-button__line {
     width: 16px;
