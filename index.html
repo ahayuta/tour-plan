@@ -12,6 +12,10 @@
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=630d8838-d4d2-4767-a334-c2ac3e7e774f&lang=ru_RU"
+      type="text/javascript"
+    ></script>
   </head>
   <body>
     <header class="navbar">
@@ -226,15 +230,25 @@
               <!-- /.button booking__button -->
             </div>
             <!-- /.booking -->
-            <div class="map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7904.082446122968!2d98.2946908!3d7.8907563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503b7bfcd9f903%3A0xf7065fac1e3d7c48!2sDoubleTree%20by%20Hilton%20Phuket%20Banthai%20Resort!5e0!3m2!1sru!2sru!4v1615487097876!5m2!1sru!2sru"
-                width="100%"
-                height="213"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
+            <div id="map" style="width: 347px; height: 213px" class="map">
+              <script type="text/javascript">
+                // Функция ymaps.ready() будет вызвана, когда
+                // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+                ymaps.ready(init);
+                function init() {
+                  // Создание карты.
+                  var myMap = new ymaps.Map("map", {
+                    // Координаты центра карты.
+                    // Порядок по умолчанию: «широта, долгота».
+                    // Чтобы не определять координаты центра карты вручную,
+                    // воспользуйтесь инструментом Определение координат.
+                    center: [7.89911078521298, 98.29975693738157],
+                    // Уровень масштабирования. Допустимые значения:
+                    // от 0 (весь мир) до 19.
+                    zoom: 18,
+                  });
+                }
+              </script>
             </div>
             <!-- /.map -->
           </div>
