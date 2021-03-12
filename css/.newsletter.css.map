@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACV,OAAO,EAAE,aAAa;EACtB,iBAAiB,EAAE,SAAS;EAC5B,eAAe,EAAE,KAAK;CAAG",
+    "sources": [
+        "../sass/blocks/.newsletter.sass"
+    ],
+    "names": [],
+    "file": ".newsletter.css"
+}
