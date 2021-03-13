@@ -12,10 +12,9 @@
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script
-      src="https://api-maps.yandex.ru/2.1/?apikey=630d8838-d4d2-4767-a334-c2ac3e7e774f&lang=ru_RU"
-      type="text/javascript"
-    ></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=630d8838-d4d2-4767-a334-c2ac3e7e774f&lang=ru_RU"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/parallax.js"></script>
   </head>
   <body>
     <header class="navbar">
@@ -139,42 +138,41 @@
               <!-- Slides -->
               <div class="swiper-slide hotel-slider__item">
                 <img
-                  class="swiper-slide__image"
+                  class="hotel-slider__image"
                   src="img/slide.jpg"
                   alt="slide "
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
-                  class="swiper-slide__image"
+                  class="hotel-slider__image"
                   src="img/slide-2.jpg"
                   alt="slide "
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
-                  class="swiper-slide__image"
+                  class="hotel-slider__image"
                   src="img/slide-3.jpg"
                   alt="slide "
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
-                  class="swiper-slide__image"
+                  class="hotel-slider__image"
                   src="img/slide-4.jpg"
                   alt="slide "
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
-                  class="swiper-slide__image"
+                  class="hotel-slider__image"
                   src="img/slide-5.jpg"
                   alt="slide "
                 />
               </div>
               ...
             </div>
-
             <!-- If we need navigation buttons -->
             <button
               class="hotel-slider__button hotel-slider__button--prev"
@@ -232,7 +230,7 @@
             </div>
             <!-- /.booking -->
             <div id="map" class="map">
-              <script type="text/javascript">
+              <script>
                 // Функция ymaps.ready() будет вызвана, когда
                 // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
                 ymaps.ready(init);
@@ -259,11 +257,17 @@
       <!-- /.container -->
     </section>
     <!-- /.hotel -->
-    <section class="newsletter">
+    <section
+      class="newsletter parallax-window"
+      data-parallax="scroll"
+      data-z-index="-100"
+      data-speed="0.2"
+      data-image-src="img/newsletter-bg.jpg"
+    >
       <div class="newsletter-wrapper">
         <h2 class="newsletter-title newsletter__title">
           subscribe to our
-          <span class="newsletter-title__strong">Newsletter</span>
+          <span class="newsletter-title__strong">NEWSLETTER</span>
         </h2>
         <form action="#" class="subscribe newsletter__subscribe">
           <input
@@ -280,7 +284,7 @@
     <!-- /.newsletter -->
     <section class="reviews">
       <div class="container">
-        <h2 class="reviews__title">What people thinks about us?</h2>
+        <h2 class="reviews__title">What people thinks about us</h2>
         <div class="swiper-container reviews-slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -339,9 +343,7 @@
                   <!-- /.reviews-slider__rating -->
                 </div>
                 <!-- /.reviews-slider__profile -->
-                <p class="reviews-slider__text">
-                  Get your ass back here!
-                </p>
+                <p class="reviews-slider__text">Get your ass back here!</p>
                 <!-- /.reviews-slider__text -->
               </div>
               <!-- /.reviews-slider__item -->
@@ -367,9 +369,7 @@
                   <!-- /.reviews-slider__rating -->
                 </div>
                 <!-- /.reviews-slider__profile -->
-                <p class="reviews-slider__text">
-                  Trying not to be HORNY
-                </p>
+                <p class="reviews-slider__text">Trying not to be HORNY</p>
                 <!-- /.reviews-slider__text -->
               </div>
               <!-- /.reviews-slider__item -->
@@ -396,7 +396,9 @@
                 </div>
                 <!-- /.reviews-slider__profile -->
                 <p class="reviews-slider__text">
-                  Here is all the trash of my critics, my envious people. Do you think that I will not outplay you, that I will not destroy you? I will destroy you.
+                  Here is all the trash of my critics, my envious people. Do you
+                  think that I will not outplay you, that I will not destroy
+                  you? I will destroy you.
                 </p>
                 <!-- /.reviews-slider__text -->
               </div>
@@ -423,9 +425,7 @@
                   <!-- /.reviews-slider__rating -->
                 </div>
                 <!-- /.reviews-slider__profile -->
-                <p class="reviews-slider__text">
-                  Stop. Watching. Porn. 
-                </p>
+                <p class="reviews-slider__text">Stop. Watching. Porn.</p>
                 <!-- /.reviews-slider__text -->
               </div>
               <!-- /.reviews-slider__item -->
@@ -461,8 +461,13 @@
             <!-- /.swiper-slide -->
           </div>
           <!-- /.swiper-wrapper -->
-          <button class="reviews-slider__button reviews-slider__button--prev"></button>
-          <button class="reviews-slider__button reviews-slider__button--next"></button>
+          <button
+            class="reviews-slider__button reviews-slider__button--prev"
+          ></button>
+          <button
+            class="reviews-slider__button reviews-slider__button--next"
+          ></button>
+        </div>
         <!-- /.reviews-slider -->
       </div>
       <!-- /.container -->
