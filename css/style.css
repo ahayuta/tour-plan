@@ -695,6 +695,8 @@ img {
 }
 
 .booking {
+  font-family: Nunito;
+  font-style: normal;
   background-color: #0A223D;
   color: #fff;
   border-radius: 8px;
@@ -870,6 +872,7 @@ img {
   font-weight: 300;
   font-size: 24px;
   line-height: 30px;
+  margin: 0;
 }
 
 .newsletter-title__strong {
@@ -943,6 +946,7 @@ img {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 70px;
+  margin-top: 0px;
 }
 
 .reviews-slider__item {
@@ -1064,12 +1068,14 @@ img {
 
 .reviews-slider__text {
   max-width: 537px;
+  max-height: 116px;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 160%;
   text-align: justify;
   margin: auto;
+  padding-bottom: 30px;
 }
 
 .activities {
@@ -1092,6 +1098,10 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.activities__card {
+  height: 255px;
 }
 
 .card {
@@ -1132,6 +1142,7 @@ img {
   bottom: 0;
   width: 100%;
   height: 100%;
+  height: 255px;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -2;
@@ -1208,6 +1219,9 @@ img {
   .search__input {
     width: 340px;
   }
+  .hotel {
+    padding-bottom: 60px;
+  }
   .hotel-grid {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1232,6 +1246,13 @@ img {
   .map {
     width: 340px;
   }
+  .reviews__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 50px;
+  }
   .reviews-slider__item {
     max-width: 580px;
   }
@@ -1244,7 +1265,7 @@ img {
   }
   .card {
     width: 340px;
-    height: 250px;
+    height: 255px;
   }
 }
 
@@ -1320,13 +1341,14 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    min-height: 450px;
+    max-height: 450px;
   }
   .hotel-slider {
     height: 350px;
   }
   .booking {
     width: 100%;
+    margin-bottom: 20px;
   }
   .map {
     width: 100%;
@@ -1431,6 +1453,25 @@ img {
   }
   .card {
     width: 100%;
+  }
+  .activities__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 36px;
+  }
+  .class-1 {
+    width: 145px;
+  }
+  .class-2 {
+    width: 153px;
+  }
+  .class-3 {
+    width: 161px;
+  }
+  .class-4 {
+    width: 200px;
   }
 }
 /*# sourceMappingURL=style.css.map */
