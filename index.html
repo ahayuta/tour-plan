@@ -17,7 +17,7 @@
     <script src="js/parallax.js"></script>
   </head>
   <body>
-    <header class="navbar navbar__mobile--fixed">
+    <header class="navbar navbar--mobile--fixed">
       <div class="container">
         <div class="navbar-top">
           <a href="#" class="logo">
@@ -49,12 +49,12 @@
             <span class="user__name">Nathan</span>
           </a>
           <!-- /.user -->
-          <button class="menu-button navbar-top__menu--button">
+          <button class="menu-button navbar-top__menu-button">
             <span class="menu-button__line"></span>
             <span class="menu-button__line"></span>
             <span class="menu-button__line"></span>
           </button>
-          <!-- /.navbar-top__menu--button -->
+          <!-- /.navbar-top-menu-button -->
         </div>
         <!-- /.navbar-top -->
       </div>
@@ -300,11 +300,16 @@
           subscribe to our
           <span class="newsletter-title__strong">NEWSLETTER</span>
         </h2>
-        <form action="#" class="subscribe newsletter__subscribe">
+        <form
+          action="send.php"
+          method="POST"
+          class="subscribe newsletter__subscribe"
+        >
           <input
             type="text"
             class="subscribe__input"
             placeholder="Your email address"
+            name="email"
           />
           <button class="subscribe__button">Send</button>
         </form>
@@ -566,11 +571,12 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img
-            src="img/vertical-logo.svg"
-            alt="Logo: Best Tour Plan"
-            class="logo footer__logo"
-          />
+          <a href="#" class="logo footer__logo"
+            ><img
+              src="img/vertical-logo.svg"
+              alt="Logo: Best Tour Plan"
+              class="logo footer__logo"
+          /></a>
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>
             <ul class="footer__ul">
@@ -671,9 +677,16 @@
                     alt="icon: map-marker"
                   />
                 </div>
-                9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United
-                States
+
+                <a
+                  href="https://goo.gl/maps/Hg3eS4kxSuFnTNm47"
+                  target="_blank"
+                  class="footer__item footer__item--mb-2--map-link"
+                  >9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United
+                  States</a
+                >
               </li>
+
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
                   <img
@@ -682,10 +695,24 @@
                     alt="icon: phone-call"
                   />
                 </div>
-                Tel (business hours) : 269 1500 <br />
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00
-                pm) <br />
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                <p class="tele-p">
+                  <a
+                    href="tel:269-1500"
+                    class="footer__item footer__item--mb-2--tel-link"
+                    >Tel (business hours) : 269 1500 <br
+                  /></a>
+                  <a
+                    href="tel:52-56-61-38"
+                    class="footer__item footer__item--mb-2--tel-link-2"
+                    >Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am –
+                    20:00 pm) <br
+                  /></a>
+                  <a
+                    href="tel:52-56-61-38"
+                    class="footer__item footer__item--mb-2--tel-link-2"
+                    >Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)</a
+                  >
+                </p>
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper">
@@ -695,29 +722,36 @@
                     alt="icon: email"
                   />
                 </div>
-                cherly.lawson@example.com
+                <a
+                  href="mailto:cherly.lawson@example.com"
+                  class="footer__item footer__item--mb-2--mail-link"
+                  >cherly.lawson@example.com</a
+                >
               </li>
             </ul>
           </div>
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-            <form action="#" class="footer__form">
+            <form action="send.php" method="POST" class="footer__form">
               <input
                 type="text"
                 class="input footer__input"
                 placeholder="Your Full Name*"
+                name="name"
               />
               <input
                 type="text"
                 class="input footer__input"
                 placeholder="Phone Number*"
+                name="phone"
               />
               <textarea
                 class="footer__message"
                 cols="30"
                 rows="10"
                 placeholder="Message"
+                name="message"
               ></textarea>
               <button class="button footer__button" type="submit">Send</button>
               <span class="footer__info">*Required Fields</span>
