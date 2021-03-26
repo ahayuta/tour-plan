@@ -21,7 +21,7 @@
     <header class="navbar navbar--mobile--fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a href="index.html" class="logo">
             <img
               src="img/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
@@ -312,9 +312,15 @@
             type="text"
             class="subscribe__input"
             placeholder="Your email address"
-            name="email"
           />
-          <button class="subscribe__button">Send</button>
+          <button
+            type="submit"
+            name="form"
+            value="sendmail"
+            class="subscribe__button"
+          >
+            <span class="span-send">Send</span>
+          </button>
         </form>
         <!-- /.newsletter-title -->
       </div>
@@ -355,7 +361,20 @@
                   staff was also very nice. Location is not good as per
                   atmosphere, it is very nearby most of the popular places but
                   self location in a narrow street is not good. Overall it was a
-                  good experience and could recommend.
+                  good experience and could recommend. Lorem ipsum dolor, sit
+                  amet consectetur adipisicing elit. Magnam aperiam rerum
+                  dolorem quia neque impedit, fugit beatae culpa ullam facilis
+                  et vitae. Assumenda laudantium nobis quidem iure fugiat
+                  perferendis quae minus, ipsa, architecto magnam ut modi sed.
+                  Magnam officia aut repudiandae nihil assumenda necessitatibus
+                  commodi sit provident dolorem qui praesentium eum illum iste
+                  cumque ipsa at optio autem, temporibus amet aliquam expedita
+                  corrupti! Est dignissimos aliquid blanditiis reiciendis!
+                  Molestiae expedita voluptatem corrupti quia quas. Amet,
+                  reprehenderit consequuntur! Officiis cumque optio, incidunt
+                  similique in esse itaque! Ratione labore voluptates
+                  reprehenderit libero, minus ab nostrum fugiat maxime fugit
+                  accusantium voluptate rem error.
                 </p>
                 <!-- /.reviews-slider__text -->
               </div>
@@ -516,7 +535,7 @@
       <div class="container">
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
-          <div class="card activities__card">
+          <div class="card activities__card card-1">
             <img
               src="img/activity-1.jpg"
               alt="The curious corner 
@@ -526,10 +545,10 @@
             <h3 class="card__title class-1">
               The curious corner of&nbsp;chamarel
             </h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div class="card activities__card card-2">
             <img
               src="img/activity-2.jpg"
               alt="Gymkhana club golf
@@ -537,10 +556,10 @@
               class="card__image"
             />
             <h3 class="card__title class-2">Gymkhana club golf course</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div class="card activities__card card-3">
             <img
               src="img/activity-3.jpg"
               alt="Tamarind falls hiking
@@ -551,10 +570,10 @@
             <h3 class="card__title class-3">
               Tamarind falls hiking trip&nbsp;-&nbsp;full day
             </h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div class="card activities__card card-4">
             <img
               src="img/activity-4.jpg"
               alt="The blue marine discovery
@@ -562,7 +581,7 @@
               class="card__image"
             />
             <h3 class="card__title class-4">The blue marine discovery quest</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
         </div>
@@ -574,7 +593,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <a href="#" class="logo footer__logo"
+          <a href="index.html" class="logo footer__logo"
             ><img
               src="img/vertical-logo.svg"
               alt="Logo: Best Tour Plan"
@@ -649,7 +668,7 @@
           </div>
           <!-- /.footer__social-network -->
           <div class="footer__list footer__legal">
-            <h3 class="footer__title">LEGAL INFORMATION</h3>
+            <h3 class="footer__title legal-1">LEGAL INFORMATION</h3>
             <ul class="footer__ul">
               <li class="footer__item">
                 <a href="#" class="footer__link">Terms & Conditions</a>
@@ -735,7 +754,9 @@
           </div>
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
-            <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
+            <h3 class="footer__title footer__title--mb-3 mb-5">
+              Send us a message
+            </h3>
             <form action="send.php" method="POST" class="footer__form">
               <input
                 type="text"
@@ -756,8 +777,12 @@
                 placeholder="Message"
                 name="message"
               ></textarea>
-              <button class="button footer__button" type="submit">Send</button>
-              <span class="footer__info">*Required Fields</span>
+              <div class="footer__button-wrapper">
+                <button class="button footer__button" type="submit">
+                  Send
+                </button>
+                <span class="footer__info">*Required Fields</span>
+              </div>
             </form>
           </div>
           <!-- /.footer__contact-form -->
@@ -792,7 +817,7 @@
         <a href="#" class="modal__close">
           <img src="img/close.svg" alt="icon: close" />
         </a>
-        <h3 class="modal__title modal__title--mb-3">Send us a message</h3>
+        <h3 class="modal__title modal__title--mb-3 booking-1">Booking</h3>
         <form action="send.php" method="POST" class="modal__form">
           <input
             type="text"
@@ -819,8 +844,10 @@
             placeholder="Message"
             name="message"
           ></textarea>
-          <button class="button modal__button" type="submit">Send</button>
-          <span class="modal__info">*Required Fields</span>
+          <div class="modal__social-network">
+            <button class="button modal__button" type="submit">Send</button>
+            <span class="modal__info">*Required Fields</span>
+          </div>
         </form>
         <!-- /.modal__close -->
       </div>

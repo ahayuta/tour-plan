@@ -40,8 +40,8 @@
         background-repeat: no-repeat
     &__button
       position: absolute
-      top: 50%
-      transform: translateY(-50%)
+      top: 40%
+      
       width: 30px
       height: 30px
       background-repeat: no-repeat
@@ -54,9 +54,12 @@
       &--prev
         background-image: url(../img/arrow-prev-secondary.svg)
         left: 0
+        transform: translateX(60%)
+        
       &--next
         background-image: url(../img/arrow-next-secondary.svg)
         right: 0
+        transform: translateX(-60%)
     &__profile
       display: flex
       flex-direction: column
@@ -76,6 +79,7 @@
       ine-height: 15px
       color: $primary-color
       margin-bottom: 10px
+      margin-top: 0px
     &__date
       font-style: normal
       font-weight: normal
@@ -95,4 +99,5 @@
       text-align: justify
       margin: auto
       padding-bottom: 30px
+      overflow: auto
       

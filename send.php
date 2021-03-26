@@ -5,27 +5,13 @@ require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
+$name = $_POST ['name'];
+$phone = $_POST ['phone'];
+$message = $_POST ['message'];
+$email = $_POST ['email'];
+$name = $_POST ['name'];
+$form = $_POST ['form'];
 
-if (isset($_POST['name']))
-    $name = $_POST['name'];
-else
-    $name = '';
-if (isset($_POST['email']))
-    $email = $_POST['email'];
-else
-    $email = '';
-if (isset($_POST['message']))
-    $message = $_POST['message'];
-else
-    $message = 'Lorem ipsum dolor sit amet.';
-if (isset($_POST['file'])) {
-    $file = $_POST['file'];
-    $rfile = "Файл прикреплён.";
-} else
-    $rfile = "Файл не прикреплён.";
-
-if ((!isset($_POST['name'])) && (!isset($_POST['email'])) && (!isset($_POST['message']))) 
-	die("Входные данные пусты. Скрипт завершается.");
 
 // Формирование самого письма
 $title = "Новое обращение Best Tour Plan";
@@ -35,7 +21,6 @@ $body = "
 <b>Телефон:</b> $phone<br><br>
 <b>Почта:</b> $email<br><br>
 <b>Сообщение:</b><br>$message";
-
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {

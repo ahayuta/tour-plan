@@ -20,14 +20,20 @@
   .container, 
   .newsletter-wrapper
     max-width: 700px
+  .search
+    &__input
+      
   .logo
     width: 132px
+  .newsletter
+    padding: 92px 0 93px 0
   .navbar
     &-top
       padding-top: 30px
       padding-bottom: 30px
     &__search
       margin-left: auto
+      transform: translateX(-10px)
     &-menu
       padding-top: 22px
       padding-bottom: 22px
@@ -49,7 +55,6 @@
       width: 100%
   .booking
     width: 340px
-
   .map
     width: 340px
   .reviews
@@ -60,9 +65,16 @@
       line-height: 38px
       margin-bottom: 50px
     &-slider
+      &__text
+        max-height: 133px
       &__item
         max-width: 580px
+      &__button
+        top: 47%
   .activities
+    padding-top: 55px
+    &__title
+      margin-bottom: 54px
     &-wrapper
       flex-wrap: wrap
     &__card
@@ -71,17 +83,23 @@
   .card
     width: 340px
     height: 255px
+    &__title
+      max-width: 200px
   .footer
+    &__title
+      &--mb-3
+        margin-top: 8px
+      &--inline
+        margin-left: -86px
     padding-top: 73px
     &-wrapper
-      grid-template-columns: repeat(6, 1fr)
       grid-row-gap: 40px
     &__input
-      flex-basis: 49%
+      flex-basis: 47%
     &__logo
       grid-row: 1 / 2
       grid-column: span 2
-      width: 104px
+      width: 99px
       height: 120px
     &__social
       &-network
@@ -93,17 +111,23 @@
       grid-column: span 2
     &__legal
       grid-column: span 2
+      margin-left: -35px
+      transform: translateX(-10px)
     &__additional
       grid-column: span 2
+      margin-left: -74px
     &__contact
       &-details
         grid-row: 3
         grid-column: span 5
+        transform: translateY(4%)
       &-form
         grid-column: span 5
         grid-row: 4
+        margin-bottom: 23px
     &__bottom
       grid-column: 1 / 5
+  
     
 @media (max-width: 767px)
   .container
@@ -228,8 +252,17 @@
     width: 49%
     height: 255px
   .footer
+    &__title
+      &--inline
+        margin: 0 43px 0 0
     &__law
       margin-right: 151px
+    &__legal
+      grid-column: span 2
+      margin-left: 25%
+    &__additional
+      grid-column: span 2
+      margin-left: 0
     &__input
       flex-basis: 100% 
 @media (max-width: 610px)
@@ -254,6 +287,14 @@
   .subscribe
     width: 100%
   .footer
+    &__button-wrapper
+      display: flex
+      flex-direction: column-reverse
+      align-items: flex-start
+    &__info
+      margin: 15px 0 15px 0 
+    &__message
+      margin-bottom: 0px
     &-wrapper
       grid-template-columns: 1fr 
     &__logo
@@ -288,15 +329,39 @@
       flex-wrap: wrap
     &__law
       margin-bottom: 10px
+  .modal
+    &__input
+      width: 200px
+    &__message
+      width: 200px
+    &__social-network
+      display: flex
+      flex-direction: column-reverse
+      align-items: flex-start
+      width: 200px
+    &__info
+      margin-bottom: 15px
 @media (max-width: 475px)
   .footer
     &__law
       margin-right: 0
+@media (max-width: 396px)
+  .modal
+    &__dialog
+      padding: 33px 60px
+    &__input
+      width: 200px
+    &__message
+      width: 200px
+
  
 @media (max-width: 320px)
   .navbar
     height: 70px
+    &-menu
+      overflow: auto
   .reviews
+    padding: 32px 0 50px 0
     &__title
       font-size: 18px
       margin-bottom: 42px
@@ -321,7 +386,10 @@
     display: flex
     margin-right: 37px
   .hotel
-    padding-top: 5px
+    &-info
+      padding-bottom: 38px
+    &__info
+    padding-bottom: 40px
     &-slider
       height: 180px
   .map
@@ -329,6 +397,7 @@
   .card
     width: 100%
   .activities
+    padding-bottom: 40px
     &__title
       font-style: normal
       font-weight: bold
@@ -340,7 +409,35 @@
       font-size: 20px
       &__strong
         font-size: 30px
-  
+  .footer
+    &__icon
+      &-wrapper
+        min-width: 30px
+    &-wrapper
+      grid-row-gap: 30px
+    &__legal
+      margin-left: 10px
+      grid-row: 3
+    &__additional
+      grid-row: 4
+    &__categories
+      grid-row: 5
+    &__social-network
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+    &__social-links
+      margin-top: 22px
+    &__title
+      &--mb-3
+        margin-bottom: 25px
+    &__contact-form
+      margin-bottom: 0px
+      margin-top: 19px
+  .breadcrumb-list
+    margin-top: 70px
+
+  // Порядки
   .class-1
     width: 145px
   .class-2
@@ -349,9 +446,20 @@
     width: 161px
   .class-4
     width: 200px
-  .footer
-    &__info
-      grid-row: 1
+  .card-1
+    order: 1
+  .card-2
+    order: 3
+  .card-3
+    order: 2
+  .card-4
+    order: 4
+  .legal-1
+    order: -1
+  .mb-5
+    margin-bottom: 15px
+  .booking-1
+    margin-top: 0
     
  
       

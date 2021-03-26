@@ -1,4 +1,5 @@
 .modal
+  overflow: auto
   &__overlay
     position: fixed
     left: 0
@@ -21,9 +22,10 @@
     max-width: 540px
   &__dialog
     position: fixed
-    top: 50%
+    top: 45 %
     left: 50%
     max-width: 478px
+    max-height: 478px
     padding: 33px 88px
     background-color: $dark
     transform: translate(-50%, -50%)
@@ -33,6 +35,7 @@
     visibility: hidden
     opacity: 0
     transition: opacity 0.2s
+    overflow: auto
     &--visible
       visibility: visible
       opacity: 1
@@ -51,15 +54,33 @@
     text-transform: uppercase
     text-align: center
   &__input
-    width: 100%
+    width: 300px
     margin-bottom: 15px
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
   &__message
-    width: 100%
+    width: 300px
     min-height: 123px
     margin-bottom: 15px
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    resize: none
+    max-height: 123px
+    overflow: auto
   &__info
     font-style: normal
     font-weight: bold
     font-size: 12px
     line-height: 15px
     color: #E0E0E0
+    margin-bottom: 0px
+  &__social-network
+    display: flex
+    justify-content: space-between
+    width: 300px
+    align-items: center
+    
