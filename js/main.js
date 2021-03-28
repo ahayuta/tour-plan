@@ -52,6 +52,7 @@ $(document).ready(function () {
     modalDialog.removeClass("modal__dialog--visible");
   }
   // Обработка форм
+  // Всё, что ниже - работает
   $(".form").each(function () {
     $(this).validate({
       errorClass: "invalid",
@@ -61,7 +62,7 @@ $(document).ready(function () {
           minlength: "The name must be at least two letters",
         },
         email: {
-          required: "We need your email address to contact you",
+          required: "Email address is necessary",
           email: "Your email address must be in the format of name@domain.com",
         },
         phone: {

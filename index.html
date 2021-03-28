@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=630d8838-d4d2-4767-a334-c2ac3e7e774f&lang=ru_RU"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/parallax.js"></script>
     <link rel="shortcut icon" href="favicon.ico" />
@@ -172,36 +172,40 @@
               <div class="swiper-slide hotel-slider__item">
                 <img
                   class="hotel-slider__image"
-                  src="img/slide.jpg"
+                  src="img-fixed/slide.jpg"
                   alt="slide "
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
                   class="hotel-slider__image"
-                  src="img/slide-2.jpg"
+                  src="img-fixed/slide-2.jpg"
                   alt="slide "
+                  loading="lazy"
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
                   class="hotel-slider__image"
-                  src="img/slide-3.jpg"
+                  src="img-fixed/slide-3.jpg"
                   alt="slide "
+                  loading="lazy"
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
                   class="hotel-slider__image"
-                  src="img/slide-4.jpg"
+                  src="img-fixed/slide-4.jpg"
                   alt="slide "
+                  loading="lazy"
                 />
               </div>
               <div class="swiper-slide hotel-slider__item">
                 <img
                   class="hotel-slider__image"
-                  src="img/slide-5.jpg"
+                  src="img-fixed/slide-5.jpg"
                   alt="slide "
+                  loading="lazy"
                 />
               </div>
               ...
@@ -265,24 +269,14 @@
             </div>
             <!-- /.booking -->
             <div id="map" class="map">
-              <script>
-                // Функция ymaps.ready() будет вызвана, когда
-                // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-                ymaps.ready(init);
-                function init() {
-                  // Создание карты.
-                  var myMap = new ymaps.Map("map", {
-                    // Координаты центра карты.
-                    // Порядок по умолчанию: «широта, долгота».
-                    // Чтобы не определять координаты центра карты вручную,
-                    // воспользуйтесь инструментом Определение координат.
-                    center: [7.89911078521298, 98.29975693738157],
-                    // Уровень масштабирования. Допустимые значения:
-                    // от 0 (весь мир) до 19.
-                    zoom: 18,
-                  });
-                }
-              </script>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d350634.1269619038!2d100.26387986236043!3d13.839255147274947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f03e0175ec3%3A0x3e2f373838cced5a!2sHilton%20Sukhumvit%20Bangkok!5e0!3m2!1sru!2sru!4v1616870033805!5m2!1sru!2sru"
+                width="347"
+                height="213"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
             </div>
             <!-- /.map -->
           </div>
@@ -297,7 +291,7 @@
       data-parallax="scroll"
       data-z-index="-100"
       data-speed="0.2"
-      data-image-src="img/newsletter-bg.jpg"
+      data-image-src="img-fixed/newsletter-bg.jpg"
     >
       <div class="newsletter-wrapper">
         <h2 class="newsletter-title newsletter__title">
@@ -307,12 +301,14 @@
         <form
           action="send.php"
           method="POST"
-          class="subscribe newsletter__subscribe"
+          class="subscribe newsletter__subscribe form"
         >
           <input
-            type="text"
+            type="email"
             class="subscribe__input"
             placeholder="Your email address"
+            name="email"
+            required
           />
           <button
             type="submit"
@@ -392,7 +388,7 @@
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img/Billy.png"
+                    src="img-fixed/Billy.jpg"
                     alt="Photo: Megan Fox"
                     class="reviews-slider__avatar"
                   />
@@ -474,7 +470,7 @@
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img/Varg.jpg"
+                    src="img-fixed/Varg.jpg"
                     alt="Photo: Megan Fox"
                     class="reviews-slider__avatar"
                   />
@@ -500,7 +496,7 @@
               <div class="reviews-slider__item">
                 <div class="reviews-slider__profile">
                   <img
-                    src="img/Why.jpeg"
+                    src="img-fixed/Why.jpeg"
                     alt="Photo: Megan Fox"
                     class="reviews-slider__avatar"
                   />
@@ -548,7 +544,7 @@
             data-aos-duration="1000"
           >
             <img
-              src="img/activity-1.jpg"
+              src="img-fixed/activity-1.jpg"
               alt="The curious corner 
             of chamarel"
               class="card__image"
@@ -565,7 +561,7 @@
             data-aos-duration="1200"
           >
             <img
-              src="img/activity-2.jpg"
+              src="img-fixed/activity-2.jpg"
               alt="Gymkhana club golf
             course"
               class="card__image"
@@ -580,7 +576,7 @@
             data-aos-duration="1400"
           >
             <img
-              src="img/activity-3.jpg"
+              src="img-fixed/activity-3.jpg"
               alt="Tamarind falls hiking
             trip - full day
             "
@@ -598,7 +594,7 @@
             data-aos-duration="1600"
           >
             <img
-              src="img/activity-4.jpg"
+              src="img-fixed/activity-4.jpg"
               alt="The blue marine discovery
             quest"
               class="card__image"
@@ -782,24 +778,26 @@
               Send us a message
             </h3>
             <form action="send.php" method="POST" class="footer__form form">
-              <div class="footer__input-group">
-                <input
-                  type="text"
-                  class="input footer__input"
-                  placeholder="Your Full Name*"
-                  name="name"
-                  required
-                />
-              </div>
-              <div class="footer__input-group">
-                <input
-                  type="tel"
-                  class="input footer__input"
-                  placeholder="Phone Number*"
-                  name="phone"
-                  id="phone"
-                  required
-                />
+              <div class="footer__input-union">
+                <div class="footer__input-group">
+                  <input
+                    type="text"
+                    class="input footer__input"
+                    placeholder="Your Full Name*"
+                    name="name"
+                    required
+                  />
+                </div>
+                <div class="footer__input-group">
+                  <input
+                    type="tel"
+                    class="input footer__input"
+                    placeholder="Phone Number*"
+                    name="phone"
+                    id="phone"
+                    required
+                  />
+                </div>
               </div>
               <textarea
                 class="message footer__message"
@@ -869,7 +867,8 @@
               type="email"
               class="input modal__input"
               placeholder="Email*"
-              name="emial"
+              name="email"
+              required
             />
             <textarea
               class="message modal__message"
@@ -897,12 +896,12 @@
     <script src="js/jquery.maskedinput.min.js"></script>
     <script>
       $(document).ready(function () {
-        $("#phone").mask("+7 (999) 99-99-9999");
+        $("#phone").mask("+7 (999) 99-99-999");
       });
     </script>
     <script>
       $(document).ready(function () {
-        $("#phone-1").mask("+7 (999) 99-99-9999");
+        $("#phone-1").mask("+7 (999) 99-99-999");
       });
     </script>
     <script src="js/main.js"></script>

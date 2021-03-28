@@ -142,7 +142,11 @@
             <p class="hotel-description hotel-info__description">
               We will contact you as soon as possible!
             </p>
-            <button onclick="document.location='index.html'" data-toggle="modal" class="button booking__button">
+            <button
+              onclick="document.location='index.html'"
+              data-toggle="modal"
+              class="button booking__button return"
+            >
               Return to the homepage
             </button>
           </div>
@@ -158,11 +162,12 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <a href="#" class="logo footer__logo"
+          <a href="index.html" class="logo footer__logo"
             ><img
               src="img/vertical-logo.svg"
               alt="Logo: Best Tour Plan"
               class="logo footer__logo"
+              data-aos="flip-left"
           /></a>
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>
@@ -233,7 +238,7 @@
           </div>
           <!-- /.footer__social-network -->
           <div class="footer__list footer__legal">
-            <h3 class="footer__title">LEGAL INFORMATION</h3>
+            <h3 class="footer__title legal-1">LEGAL INFORMATION</h3>
             <ul class="footer__ul">
               <li class="footer__item">
                 <a href="#" class="footer__link">Terms & Conditions</a>
@@ -319,29 +324,44 @@
           </div>
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
-            <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-            <form action="send.php" method="POST" class="footer__form">
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Your Full Name*"
-                name="name"
-              />
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Phone Number*"
-                name="phone"
-              />
+            <h3 class="footer__title footer__title--mb-3 mb-5">
+              Send us a message
+            </h3>
+            <form action="send.php" method="POST" class="footer__form form">
+              <div class="footer__input-union">
+                <div class="footer__input-group">
+                  <input
+                    type="text"
+                    class="input footer__input"
+                    placeholder="Your Full Name*"
+                    name="name"
+                    required
+                  />
+                </div>
+                <div class="footer__input-group">
+                  <input
+                    type="tel"
+                    class="input footer__input"
+                    placeholder="Phone Number*"
+                    name="phone"
+                    id="phone"
+                    required
+                  />
+                </div>
+              </div>
               <textarea
-                class="footer__message"
+                class="message footer__message"
                 cols="30"
                 rows="10"
                 placeholder="Message"
                 name="message"
               ></textarea>
-              <button class="button footer__button" type="submit">Send</button>
-              <span class="footer__info">*Required Fields</span>
+              <div class="footer__button-wrapper">
+                <button class="button footer__button" type="submit">
+                  Send
+                </button>
+                <span class="footer__info">*Required Fields</span>
+              </div>
             </form>
           </div>
           <!-- /.footer__contact-form -->

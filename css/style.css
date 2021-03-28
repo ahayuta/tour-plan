@@ -725,6 +725,7 @@ img {
 .rating__counter {
   font-size: 14px;
   line-height: 18px;
+  font-weight: bold;
 }
 
 .rating__small {
@@ -928,12 +929,9 @@ img {
   position: relative;
   width: 355px;
   height: 55px;
-  border-radius: 4px;
-  overflow: hidden;
 }
 
 .subscribe__input {
-  position: absolute;
   width: 100%;
   height: 100%;
   border: none;
@@ -942,6 +940,7 @@ img {
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
+  border-radius: 4px;
 }
 
 .subscribe__input::-webkit-input-placeholder {
@@ -1012,17 +1011,19 @@ img {
   background-color: #fff;
   border-radius: 8px;
   padding: 0 62px 30px;
+  z-index: 1;
 }
 
 .reviews-slider__item::before {
   content: '';
   position: absolute;
   left: 62px;
-  top: 13px;
+  top: 32px;
   width: 70px;
   height: 47px;
   background-image: url(../img/quote-left.svg);
   background-repeat: no-repeat;
+  z-index: -1;
 }
 
 .reviews-slider__item::after {
@@ -1034,6 +1035,7 @@ img {
   height: 47px;
   background-image: url(../img/quote-right.svg);
   background-repeat: no-repeat;
+  z-index: -1;
 }
 
 .reviews-slider__button {
@@ -1392,10 +1394,22 @@ img {
   width: 100%;
 }
 
+.footer__input-union {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 540px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
 .footer__input-group {
   margin-bottom: 15px;
-  -ms-flex-preferred-size: 48%;
-      flex-basis: 48%;
+  -ms-flex-preferred-size: 47%;
+      flex-basis: 47%;
   font-size: 12px;
   line-height: 15px;
 }
@@ -1612,6 +1626,10 @@ img {
           align-items: center;
 }
 
+.return {
+  margin-top: 20px;
+}
+
 @media (max-width: 1920px) {
   .hotel-slider__image {
     height: 100%;
@@ -1632,9 +1650,38 @@ img {
     width: 230px;
     height: 230px;
   }
-  .footer__input-group {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+}
+
+@media (min-width: 992px) {
+  .navbar-menu__link:hover {
+    color: red;
+  }
+  .footer__link:hover {
+    color: white;
+  }
+  .button:hover {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+    -webkit-transition-duration: 0.5;
+            transition-duration: 0.5;
+  }
+  .card__button:hover {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+    -webkit-transition-duration: 0.5;
+            transition-duration: 0.5;
+  }
+  .subscribe__button:hover {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+    -webkit-transition-duration: 0.5;
+            transition-duration: 0.5;
+  }
+  .search__button:hover {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+    -webkit-transition-duration: 0.5;
+            transition-duration: 0.5;
   }
 }
 
@@ -1735,6 +1782,7 @@ img {
   }
   .footer {
     padding-top: 73px;
+    hover-display: none;
   }
   .footer__title--mb-3 {
     margin-top: 8px;
@@ -1995,10 +2043,6 @@ img {
     grid-column: span 2;
     margin-left: 0;
   }
-  .footer__input-group {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-  }
 }
 
 @media (max-width: 610px) {
@@ -2108,11 +2152,22 @@ img {
   .footer__law {
     margin-bottom: 10px;
   }
+  .footer__input {
+    width: 100%;
+  }
+  .footer__input-union {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer__input-group {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
   .modal__input {
-    width: 200px;
+    width: 100%;
   }
   .modal__message {
-    width: 200px;
+    width: 100%;
   }
   .modal__social-network {
     display: -webkit-box;
@@ -2128,7 +2183,7 @@ img {
     width: 200px;
   }
   .modal__info {
-    margin-bottom: 15px;
+    margin-top: 15px;
   }
 }
 
@@ -2143,16 +2198,16 @@ img {
     padding: 33px 60px;
   }
   .modal__input {
-    width: 200px;
+    width: 100%;
   }
   .modal__message {
-    width: 200px;
+    width: 100%;
   }
 }
 
 @media (max-width: 320px) {
   .navbar {
-    height: 70px;
+    height: 80px;
   }
   .navbar-menu {
     overflow: auto;

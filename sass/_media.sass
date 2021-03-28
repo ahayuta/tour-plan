@@ -16,14 +16,40 @@
   .footer
     &__input
       &-group
-        flex-basis: 100%
+@media (min-width: 992px)
+  .navbar
+    &-menu
+      &__link:hover
+        color: red
+        
+  .footer
+    &__link:hover
+      color: white
+  .button:hover
+    transform: scale(1.08)
+    transition-duration: 0.5
+  .card
+    &__button:hover
+      transform: scale(1.08)
+      transition-duration: 0.5
+  .subscribe
+    &__button:hover
+      transform: scale(1.08)
+      transition-duration: 0.5
+  .search
+    &__button:hover
+      transform: scale(1.08)
+      transition-duration: 0.5
+  
+
+      
+       
 @media (max-width: 992px)
   .container, 
   .newsletter-wrapper
     max-width: 700px
   .search
     &__input
-      
   .logo
     width: 132px
   .newsletter
@@ -129,6 +155,8 @@
         margin-bottom: 23px
     &__bottom
       grid-column: 1 / 5
+    :hover
+      display: none
   
     
 @media (max-width: 767px)
@@ -265,9 +293,6 @@
     &__additional
       grid-column: span 2
       margin-left: 0
-    &__input
-      &-group
-        flex-basis: 100% 
 @media (max-width: 610px)
   .footer
     &__bottom
@@ -332,18 +357,25 @@
       flex-wrap: wrap
     &__law
       margin-bottom: 10px
+    &__input
+      width: 100%
+      &-union
+        flex-wrap: wrap
+      &-group
+        flex-basis: 100% 
   .modal
     &__input
-      width: 200px
+      width: 100%
     &__message
-      width: 200px
+      width: 100%
     &__social-network
       display: flex
       flex-direction: column-reverse
       align-items: flex-start
       width: 200px
     &__info
-      margin-bottom: 15px
+      margin-top: 15px
+    
 @media (max-width: 475px)
   .footer
     &__law
@@ -353,14 +385,12 @@
     &__dialog
       padding: 33px 60px
     &__input
-      width: 200px
+      width: 100%
     &__message
-      width: 200px
-
- 
+      width: 100%
 @media (max-width: 320px)
   .navbar
-    height: 70px
+    height: 80px
     &-menu
       overflow: auto
   .reviews
