@@ -19,12 +19,21 @@
 @media (min-width: 992px)
   .navbar
     &-menu
+      &__link
+        font-style: 12px
       &__link:hover
         color: red
-        
   .footer
     &__link:hover
       color: white
+    &__item
+      &--mb-2--tel-link:hover
+        color: white
+      &--mb-2--tel-link-2:hover
+        color: white
+      &--mb-2--mail-link:hover
+        color: white
+        
   .button:hover
     transform: scale(1.08)
     transition-duration: 0.5
@@ -64,6 +73,7 @@
     &-menu
       padding-top: 22px
       padding-bottom: 22px
+      justify-content: space-around
       &__link
         font-size: 12px
         line-height: 15px
@@ -97,7 +107,11 @@
       &__item
         max-width: 580px
       &__button
-        top: 47%
+        top: 46%
+        &--prev
+          left: -3%
+        &--next
+          right: -3%
   .activities
     padding-top: 55px
     &__title
@@ -114,6 +128,7 @@
       max-width: 200px
   .footer
     &__title
+      margin-top: 12px
       &--mb-3
         margin-top: 8px
       &--inline
@@ -127,13 +142,15 @@
     &__logo
       grid-row: 1 / 2
       grid-column: span 2
-      width: 99px
-      height: 120px
+      width: 97px
+      height: 110px
     &__social
       &-network
         grid-row: 1 / 2
         grid-column: span 4
         align-self: center
+      &-links
+        margin-top: 10px
     &__categories
       grid-row: 2 / 3
       grid-column: span 2
@@ -160,6 +177,18 @@
   
     
 @media (max-width: 767px)
+  .navbar
+    &-top
+      padding-top: 28px
+    &-menu
+      overflow: scroll
+    &-bottom
+      position: fixed
+      left: 0
+      right: 0
+      top: 70px
+      bottom: 0
+      overflow: scroll
   .container
     max-width: 576px
     width: 92%
@@ -389,10 +418,20 @@
     &__message
       width: 100%
 @media (max-width: 320px)
+  .container
+    width: 90%
   .navbar
-    height: 80px
+    &-top
+      padding-top: 28px
     &-menu
       overflow: auto
+    &-bottom
+      position: fixed
+      left: 0
+      right: 0
+      top: 70px
+      bottom: 0
+      overflow: scroll
   .reviews
     padding: 32px 0 50px 0
     &__title
@@ -408,12 +447,16 @@
         height: 438px
       &__text
         margin-top: 0
+        max-height: 530px
       &__button
         &--prev
           transform: translateX(-140%)  
         &--next
           transform: translateX(140%) 
-        
+  .search
+    &__input
+      width: 243px
+      margin-left: 20px
   .stars
     padding-bottom: 5px
     display: flex
@@ -437,17 +480,22 @@
       font-size: 18px
       line-height: 23px
       margin-bottom: 36px
+  .subscribe
+    width: 280px
   .newsletter
     &-title
       font-size: 20px
       &__strong
         font-size: 30px
   .footer
+    padding-top: 75px
+    &__logo
+      margin-bottom: 10px
     &__icon
       &-wrapper
         min-width: 30px
     &-wrapper
-      grid-row-gap: 30px
+      grid-row-gap: 32px
     &__legal
       margin-left: 10px
       grid-row: 3
@@ -462,13 +510,25 @@
     &__social-links
       margin-top: 22px
     &__title
+      margin-top: -3px
+      &--mb-5
+        margin-bottom: 17px
+        margin-top: 13px
+    &__message
       &--mb-3
-        margin-bottom: 25px
+        margin-bottom: 28px
     &__contact-form
       margin-bottom: 0px
-      margin-top: 19px
+      margin-top: 0px
+    &__text
+      margin-bottom: 22px
+    &__item
+      &--mb-2
+        margin-bottom: 26px
   .breadcrumb-list
     margin-top: 70px
+  .fix
+    
 
   // Порядки
   .class-1
@@ -489,8 +549,6 @@
     order: 4
   .legal-1
     order: -1
-  .mb-5
-    margin-bottom: 15px
   .booking-1
     margin-top: 0
     

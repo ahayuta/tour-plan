@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/parallax.js"></script>
     <link rel="shortcut icon" href="favicon.ico" />
@@ -271,7 +270,7 @@
             <div id="map" class="map">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d350634.1269619038!2d100.26387986236043!3d13.839255147274947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f03e0175ec3%3A0x3e2f373838cced5a!2sHilton%20Sukhumvit%20Bangkok!5e0!3m2!1sru!2sru!4v1616870033805!5m2!1sru!2sru"
-                width="347"
+                width="100%"
                 height="213"
                 style="border: 0"
                 allowfullscreen=""
@@ -674,7 +673,9 @@
             </ul>
           </div>
           <div class="footer__social-network">
-            <h3 class="footer__title footer__title--inline">Social Network</h3>
+            <h3 class="footer__title footer__title--inline fix">
+              Social Network
+            </h3>
             <div class="footer__social-links">
               <a href="#" class="footer__link"
                 ><img src="img/facebook.svg" alt="icon: facebook" /></a
@@ -774,7 +775,9 @@
           </div>
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
-            <h3 class="footer__title footer__title--mb-3 mb-5">
+            <h3
+              class="footer__title footer__title--mb-3 footer__title footer__title--mb-5"
+            >
               Send us a message
             </h3>
             <form action="send.php" method="POST" class="footer__form form">
@@ -901,7 +904,7 @@
     </script>
     <script>
       $(document).ready(function () {
-        $("#phone-1").mask("+7 (999) 99-99-999");
+        $("#phone-1").mask("+7 (999) 999-99-99");
       });
     </script>
     <script src="js/main.js"></script>
